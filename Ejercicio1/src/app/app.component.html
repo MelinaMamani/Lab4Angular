@@ -1,0 +1,30 @@
+<section class="py-3">
+  <h2>Formulario de edades</h2>
+  <div class="col-md-4">
+    <label>Edad 1:</label>
+    <input
+      type="number"
+      name="edad1"
+      [value]="this.edad1"
+      [(ngModel)]="this.edad1"
+      class="form-control mb-3">
+    <label>Edad 2:</label>
+    <input
+      type="number"
+      name="edad2"
+      [value]="this.edad2"
+      [(ngModel)]="this.edad2"
+      class="form-control mb-3">
+  </div>
+  <div class="col-lg-4 col-md-4 d-flex justify-content-evenly">
+    <button class="btn btn-success" (click)="this.calcularEdades()">Calcular</button>
+    <button class="btn btn-warning" (click)="this.limpiarInputs()">Limpiar cuadros de texto</button>
+  </div>
+</section>
+<section>
+  <h5>Resultados:</h5>
+  <p>Suma de edades: {{this.suma}}</p>
+  <p>Promedio de edades: {{this.promedio}}</p>
+</section>
+
+<router-outlet></router-outlet>
